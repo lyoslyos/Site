@@ -27,7 +27,13 @@ body{
     font-family: "FedraSansAltPro";
     src: url('../typo/FedraSansAltPro Book.otf');
 }
-
+#global-contenue
+{
+	background-color:#FFFFFF;	
+	padding-top:25px; 
+	padding-bottom:25px;
+	margin: 0;
+}
 .wrapper{
 
 	width:800px;
@@ -48,13 +54,52 @@ body{
 
 	font-size:35px;
 }
+.menu
+{
+	float:left;
+	height:220px;
+	width: 18%;
 
+}
+.titre-menu
+{
+	height:32px;
+	font-size:15px;
+	text-decoration:underline;
+}
+.docu
+{
 
-
+	margin-right:25%;
+	margin-left:25%;
+	height:850px !important;
+	background-color:#E8EAEA;
+}
+.titre
+{
+	font-family: 'Fjalla One', sans-serif;
+	font-size:45px;
+	text-align:left;
+	margin-top:12px;
+	margin-bottom:12px;
+}
+.sous-titre
+{
+	font-family: 'Fjalla One', sans-serif;
+	font-size:35px;
+	margin-top:12px;
+	margin-bottom:12px;
+	text-align: center;
+}
+.contenue
+{
+	font-size:19px;
+		margin-top:5px;
+	margin-bottom:5px;
+}
 #wrapfoot{
 	width:100%;
-	bottom: 0px;
-	position:absolute;
+
 	height:100px;
 	background-color:#454545;
 }
@@ -101,7 +146,7 @@ div#presentation
 	/*background-color:#FFFFFF;*/
 	background-color:#005F65;
 	margin: 0px 0 0px 0;
-	padding-bottom: 275px;
+	padding-bottom: 225px;
 }
 #presentation_col-left
 {
