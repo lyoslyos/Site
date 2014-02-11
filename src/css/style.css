@@ -65,7 +65,7 @@ body{
 {
 	height:32px;
 	font-size:15px;
-	text-decoration:underline;
+
 }
 .docu
 {
@@ -74,6 +74,18 @@ body{
 	margin-left:25%;
 	height:850px !important;
 	background-color:#E8EAEA;
+}
+.case
+{
+	background-color:red;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:6px;
+}
+.titre-cour
+{
+
+
 }
 .titre
 {
@@ -553,7 +565,7 @@ the right position for the arrow
 }
 
 .cbp-tm-icon-pencil:before {
-	content: "\e00b";
+	 background-image:"src/img/orm.png";
 }
 
 .cbp-tm-icon-article:before {
@@ -565,7 +577,7 @@ the right position for the arrow
 }
 
 .cbp-tm-icon-videos:before {
-	content: "\e00e";
+	;
 }
 
 .cbp-tm-icon-pictures:before {
@@ -649,3 +661,72 @@ the right position for the arrow
 }
 
 /*FIN MENU*/
+/*
+MENU VERTICAL */
+/*######## ITEMS Principaux ############*/
+.menu_div ul {
+margin:0px;
+padding:0px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:15px;
+color:#FFF;
+list-style:none;
+text-indent:15px;
+background:#333333;
+width:220px;
+position:absolute;
+}
+
+.menu_div ul li {
+background:#333333;
+line-height:40px;
+border-bottom:1px solid #000;
+height:40px;
+}
+
+.menu_div ul li:hover {
+background:#4D4D4D;
+}
+
+.menu_div ul li a {
+text-decoration:none;
+color:#FFF;
+display:block;
+}
+
+.menu_div ul li a:hover {
+background:#4D4D4D;
+}
+
+.menu_div ul li#active {
+background:#3ea5ea;
+}
+/*######## FIN règles ITEMS Principaux ############*/
+
+/*######## ITEMS Secondaires ############*/
+ul ul {
+display: none;
+}
+
+li:hover ul.sub-item1 {
+display:block;
+left:200px;
+top:41px;
+position:absolute;
+width:200px;
+}
+
+li:hover ul.sub-item2 {
+display:block;
+left:200px;
+top:82px;
+position:absolute;
+}
+
+li:hover ul.sub-item3 {
+display:block;
+left:200px;
+top:123px;
+position:absolute;
+}/*
+Fin menu vertical */
