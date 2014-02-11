@@ -12,6 +12,13 @@ body{
 	font-family:"FedraSansAltPro";
 	font-size:16px;
 }
+.head
+{
+	height:75px;
+	width: 100%;
+	color:#000000 !important;
+	text-align:center;
+}
 
 /*TYPO*/
 /*.blue_txt{
@@ -29,7 +36,7 @@ body{
 }
 #global-contenue
 {
-	background-color:#FFFFFF;	
+	background-color:#EDEDED;	
 	padding-top:25px; 
 	padding-bottom:25px;
 	margin: 0;
@@ -42,11 +49,17 @@ body{
 	margin:0 auto 0 auto;
 	background-color:transparent;
 }
+.cbp-tm-icon-pencil img
+{	
+	float:right;
+	height:17px;
+	width:auto;
+}
 .boxImg2 img{
 			/*width:80%;
 			height:auto;*/
 			width:auto;
-			height:200px;
+			height:205px;
 			padding:5px;
 		}
 #slogan
@@ -61,12 +74,7 @@ body{
 	width: 18%;
 
 }
-.titre-menu
-{
-	height:32px;
-	font-size:15px;
 
-}
 .docu
 {
 
@@ -75,18 +83,15 @@ body{
 	height:850px !important;
 	background-color:#E8EAEA;
 }
-.case
+.titre-top
 {
-	background-color:red;
-	margin-top:5px;
-	margin-bottom:5px;
-	margin-left:6px;
+	float:left;
+	font-size:45px;
+	font-family: 'Fjalla One', sans-serif;
+	padding-top:3%;
+	margin-right:15%;
 }
-.titre-cour
-{
 
-
-}
 .titre
 {
 	font-family: 'Fjalla One', sans-serif;
@@ -162,7 +167,7 @@ div#presentation
 }
 #presentation_col-left
 {
-	width:60%;
+	width:50%;
 	height: auto;
 	position:relative;
 	float:left;
@@ -672,13 +677,13 @@ font-size:15px;
 color:#FFF;
 list-style:none;
 text-indent:15px;
-background:#333333;
+background:#454545;
 width:220px;
 position:absolute;
 }
 
 .menu_div ul li {
-background:#333333;
+background:#454545;
 line-height:40px;
 border-bottom:1px solid #000;
 height:40px;
@@ -710,22 +715,23 @@ display: none;
 
 li:hover ul.sub-item1 {
 display:block;
-left:200px;
+left:219px;
 top:41px;
 position:absolute;
 width:200px;
+
 }
 
 li:hover ul.sub-item2 {
 display:block;
-left:200px;
+left:219px;
 top:82px;
 position:absolute;
 }
 
 li:hover ul.sub-item3 {
 display:block;
-left:200px;
+left:219px;
 top:123px;
 position:absolute;
 }/*
