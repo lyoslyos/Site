@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Drakkard Framework Homepage">
+    <meta name="keywords" content="Framework PHP optimiser de fou ">
+    <meta name="author" content="La team Drakkard">
+    <meta charset="utf-8">
+    <title>Drakkard Framework</title>
+
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/default.css" />
+    <script src="src/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<<<<<<< HEAD
+	<!--Header-->
+		<header>
+
+	
+		<div id="presentation">
+			<div class="head">
+				<div id="presentation_col-left">
+					<div class="boxImg2"><img src="src/img/drakkard.svg" id="logo" alt="Logo drakkard"></div>
+
+				</div>
+				<div class="titre-top">DrakkarD Framework</h1>
+			</div>
+		</div>
+	</header>
+	<!--Bandeau-->
+	<div id="bandeau">	
+					<ul id="cbp-tm-menu" class="cbp-tm-menu">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="doc.html">Corps du framework</a>
+					<ul class="cbp-tm-submenu">
+						<li><a href="#" class="cbp-tm-icon-pencil"><img src="src/img/rooting.png">Routeur</a></li>
+						<li><a href="#" class="cbp-tm-icon-pencil"><img src="src/img/orm.png">ORM</a></li>
+						<li><a href="#" class="cbp-tm-icon-pencil"><img src="src/img/package.png">Packages</a></li>
+						<li><a href="#" class="cbp-tm-icon-pencil"><img src="src/img/template.png">Twigg</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="forum/index.php">Forum</a>
+
+				</li>
+				<li>
+					<a href="forum/index.php">Téléchargement</a>
+
+				</li>
+				<li>
+					<a href="#">Nous</a>
+					<ul class="cbp-tm-submenu">
+						<li><a href="#" class="cbp-tm-icon-pencil"><img src="src/img/contact.svg">Contact</a></li>
+						<li><a href="#" class="cbp-tm-icon-pencil"><img src="src/img/facebook.svg">Facebook</a></li>
+						<li><a href="#" class="cbp-tm-icon-pencil"><img src="src/img/twitter.svg">Twitter</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="filler-below"></div>
+		</div>
+		<script src="src/js/cbpTooltipMenu.min.js"></script>
+		<script>
+			var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+		</script>
+	</div>
+	<!--Bandeau fin-->
+	<!--3Box-->
+	<div id="global-contenue">
+		<div class="menu_div"> <!--menu -->
+<ul>
+<li><a href="index.html">Home</a></li>
+
+<li><a href="#">ORM</a> 
+<ul class="sub-item1"> 
+<li><a href="#">remplir</a>
+<ul class="sub-sub-item1"> 
+<li><a href="#">remplir</a></li>
+<li><a href="#">remplir</a></li>
+<li><a href="#">remplir</a></li>
+</ul>
+</ul>
+</li>
+</li>
+
+<li><a href="#">routeur</a>
+<ul class="sub-item2">
+<li><a href="#">remplir</a></li>
+<li><a href="#">remplir</a></li>
+<li><a href="#">remplir</a></li>
+</ul>
+</li>
+
+<li><a href="#">Packages</a>
+<ul class="sub-item3"> 
+<li><a href="#">remplir</a></li>
+<li><a href="#">remplir</a></li>
+<li><a href="#">remplir</a></li>
+</ul>
+</li>
+
+<li><a href="#">Twigg</a></li>
+
+</ul>
+</div> <!--fin du menu -->
+		<div class="docu">
+			<div class="titre">
+				Packages
+			</div>
+			<div class="sous-titre">
+				Introduction
+			</div>
+			<div class="contenue">
+				Le système de Package a été pensé pour vous permettre de façon très simple d'exécuter un flot de méthode en appelant simplement package avec l'instance en question ainsi que le nom du package a éffectué.
+				<br><br>
+				Pourquoi utiliser ce système ? tout d'abord pour la clarté du code ! Il est en effet désormais possible de ranger la plupart de ses actions dans de simple configurations. Ainsi votre action est représenté simplement.
+			</div>
+			<div class="sous-titre">
+				La classe Package
+			</div>
+			<div class="contenue">
+				La classe Package réponds au pattern des Singleton (ce qui signifie qu'il ne peut y avoir au plus qu'une seule instance de cette classe).<br><br>
+				Pour y accéder il vous suffit de faire :
+				<br><br>
+				DrakkarD\Package\Package::getInstance();
+				<br>
+			</div>
+			<div class="sous-titre">
+				Configuration d'un Package
+			</div>
+			<div class="contenue">
+				La configuration des package se fait directement dans la classe que vous cibler. Vous créer un tableau qui contiendra en clé le nom de votre package et en valeur un tableau contenant le nom de toutes les méthodes a appelé.
+				<br><br>
+				Cet attribut doit être couplé d'une méthode publique getPackage() qui retourneras ce tableau.
+				<br><br>
+				Le nom des méthodes a appelé peut être couplé de différents arguments. L'ensemble des arguments devront être entourés de parenthèses. (comme lors d'un appel de fonction normal)
+			</div>
+			<div class="sous-titre">
+				Les Arguments
+			</div>
+			<div class="contenue">
+				Plusieurs types d'arguments peuvent être passés :
+				<br><br>
+				On peut passer une simple chaine de caractères entouré ou non de quote (') ou de double quote (").
+				<br>
+				function_to_call('chaine_de_caractères');
+
+				On peut aussi accéder a une variable globale. Pour ceci on va indiqué que l'on souhaite atteindre une variable grace au signe pourcentage (%)
+				<br><br>
+				ex : 'ActionName1' => 'functionToExecute(%variableName)'
+				<br><br>
+				On peut également accéder a une constante constante globale. Pour cela on va indiqué que l'on souhaite atteindre une constante grace au point d'exclamation (!)
+				<br><br>
+				ex : 'ActionName1' => 'functionToExecute(!CONSTANT_NAME)'
+				<br><br>
+				<span style="texxt-align:center">de la même manière on peut accéder aux :</span>
+				<br><br>
+				instance et attribut d'instance 
+				<br><br>ex : 'ActionName1' => 'functionToExecute(%instanceName.attributName)'
+				<br><br>
+				instance variable protected ou private : Dans ce cas là on va tenter d'appeller la méthode getAttributName();
+				<br><br>
+				static attribut : 'ActionName1' => 'functionToExecute(%NamespaceName\InstanceName::%attributName)'
+				<br><br>
+				constantes de classe : 'ActionName1' => 'functionToExecute(%NamespaceName\InstanceName::!CONSTANT_NAME)'
+				<br><br>
+			</div>
+<div style="height:50px; width:100%; background-color:#454545;">
+		</div>
+
+		<!--Recompenses fin-->
+		</div>
+	</div>
+	<!--3Box fin-->
+	<!--Recompenses-->
+
+		
+
+
+	</body>
+>>>>>>> 032a42a80829f5146cab790c7fa08add6f5aa17c
+</html>
+
+
