@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Drakkard Framework Homepage">
+    <meta name="author" content="DrakkarD Framework">
+    <meta charset="utf-8">
+    <title>Drakkard Framework</title>
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--Header-->
+<header>
+    <div id="presentation">
+        <div class="head">
+            <div id="presentation_col-left">
+                <div class="boxImg2"><img src="src/img/drakkard.svg" id="logo" alt="Logo drakkard"></div>
+            </div>
+            <h1 class="titre-top">Drak<span style="color:white">karD</span> Framework</h1>
+        </div>
+    </div>
+</header>
+<!--Bandeau-->
+<div id="bandeau">
+    <ul id="cbp-tm-menu" class="cbp-tm-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="doc.routing.html">Documentation</a>
+            <ul class="cbp-tm-submenu">
+                <li><a href="doc.routing.html" class="cbp-tm-icon-pencil"><img src="src/img/rooting.png">Routeur</a></li>
+                <li><a href="doc.orm.html" class="cbp-tm-icon-pencil"><img src="src/img/orm.png">ORM</a></li>
+                <li><a href="doc.package.html" class="cbp-tm-icon-pencil"><img src="src/img/package.png">Packages</a></li>
+                <li><a href="doc.twig.html" class="cbp-tm-icon-pencil"><img src="src/img/template.png">Twig</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="Forum/index.php">Forum</a>
+        </li>
+        <li>
+            <a href="https://github.com/KarooKoin/DrakkarDFramework">Téléchargement</a>
+        </li>
+    </ul>
+    <div class="filler-below"></div>
+</div>
+<script src="src/js/cbpTooltipMenu.min.js"></script>
+<script>
+    var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+</script>
+<!--Bandeau fin-->
+<!--3Box-->
+<div id="global-contenue">
+    <div class="menu_div"> <!--menu -->
+        <ul>
+            <li>
+                <a href="doc.routing.html">Routeur</a>
+            </li>
+            <li>
+                <a href="doc.orm.html">ORM</a>
+            </li>
+            <li>
+                <a href="doc.package.html">Packages</a>
+            </li>
+            <li>
+                <a href="doc.twig.html">Twig</a>
+            </li>
+        </ul>
+</div> <!--fin du menu -->
+		<div class="docu">
+			<div class="titre">
+				Active Record
+			</div>
+			<div class="sous-titre">
+				Introduction
+			</div>
+			<div class="contenue">
+				Active Record est un ORM simple qui vous permettra de faire toutes vos actions CRUD, mais dispose également d'un query builder. Il s'adapte plutot bien a vos models et aux relations entre les tables. Nous allons ici voir quelques basique pour le CRUD. Pour le reste je vous renvoi vers la <a href="http://www.phpactiverecord.org/projects/main/wiki">documentation complète de php Active Record</a>.
+			</div>
+			<div class="sous-titre">
+				CRUD
+			</div>
+			<div class="contenue">
+				Create :
+				<br><br> Pour créer un nouveau user : User::create(array('name' => 'Tito', …));
+				<br>create va attendre un array comprenant le nom du champ puis sa valeur
+				<br><br><br>
+				Read :
+				<br><br>
+				Pour lire des données on peut très facilement récupérer un utilisateur par son id
+				<br>Comme ceci : $user->find(1); // on récupère ici l'utilisateur avec l'id = 1
+				<br>On peut également récupérer tous les utilisateurs avec : $user->find('all');
+				<br><br>
+				Active Record est de plus assez intéligent pour permettre de faire des méthodes personnalisés aux models.
+				<br>exemple : $user->find_by_name('Michel'); // va directement chercher tous les utilisateurs ou le nom seras Michel
+				<br><br><br>
+				Update :
+				<br><br>
+				pour ceci une fois l'instance d'un utilisateur modifié par rapport au donnée enregistré en Base de Donnée.
+				<br>Il nous suffit de faire : $user->save();
+				<br>Ce qui sauvegarderas en base de données les nouvelles données;
+				<br><br><br>
+				Delete
+				<br><br>
+				Pour delete une ligne en base de donnée. Une fois l'instance hydraté.
+				<br>Il nous suffit de faire $user->delete();
+
+				<br><br><br>
+				Comme vous avez pu le voir Active Record est très simple d'utilisation mais réserve tout de même quelques bonnes surprise ! Il vous faut absolument aller voir la documentation de Active Record pour pouvoir l'utiliser dans un projet.
+			</div>
+		</div>
+	</div>
+<div id="wrapfoot">
+    <p>©2014 DrakkarD Framework</p>
+</div>
+
+	</body>
+</html>
+
+
