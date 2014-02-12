@@ -1,76 +1,51 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="description" content="Drakkard Framework Homepage">
-		<meta name="keywords" content="Framework PHP optimiser de fou ">
-		<meta name="author" content="La team Drakkard">
-		<meta charset="utf-8">
-		<title>Drakkard Framework</title>
-
-		<link rel="stylesheet" type="text/css" href="src/css/style.css">
-		<link rel="stylesheet" type="text/css" href="src/css/default.css" />
-		<script src="src/js/modernizr.custom.js"></script>
-		<script type="text/javascript" src="src/js/main.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-	<!--Header-->
-		<header>
-			<div id="presentation">
-				<div class="wrapper">
-					<div id="presentation_col-left">
-						<div class="boxImg2">
-							<img src="src/img/drakkard.svg" id="logo" alt="Logo drakkard">
-						</div>
-					</div>
-					<h3>Le framework qui flotte (orange/blanc background)</h3>
-				</div>
-			</div>
-		</header>
-	<!--Bandeau-->
-		<div id="bandeau">	
-			<ul id="cbp-tm-menu" class="cbp-tm-menu">
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">Corps du framework</a>
-					<ul class="cbp-tm-submenu">
-						<li>
-							<a href="#" class="cbp-tm-icon-pencil">ORM</a>
-						</li>
-						<li>
-							<a href="#" class="cbp-tm-icon-cog">Routeur</a>
-						</li>
-						<li>
-							<a href="#" class="cbp-tm-icon-cog">Packages</a>
-						</li>
-						<li>
-							<a href="#" class="cbp-tm-icon-article">Twig</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="forum/index.php">Forum</a>
-				</li>
-				<li>
-					<a href="#">Nous</a>
-					<ul class="cbp-tm-submenu">
-						<li>
-							<a href="#" class="cbp-tm-icon-mail">contact</a>
-						</li>
-						<li>
-							<a href="#" class="cbp-tm-icon-article">Facebook</a>
-						</li>
-						<li>
-							<a href="#" class="cbp-tm-icon-clock">twitter</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<div class="filler-below">
-			</div>
-		</div>
+<head>
+    <meta name="description" content="Drakkard Framework Homepage">
+    <meta name="author" content="DrakkarD Framework">
+    <meta charset="utf-8">
+    <title>Drakkard Framework</title>
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div id="presentation">
+            <div class="head">
+                <div id="presentation_col-left">
+                    <div class="boxImg2"><img src="src/img/drakkard.svg" id="logo" alt="Logo drakkard"></div>
+                </div>
+                <h1 class="titre-top">Drak<span style="color:white">karD</span> Framework</h1>
+            </div>
+        </div>
+    </header>
+    <!--Bandeau-->
+    <div id="bandeau">
+        <ul id="cbp-tm-menu" class="cbp-tm-menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="doc.routing.html">Documentation</a>
+                <ul class="cbp-tm-submenu">
+                    <li><a href="doc.routing.html" class="cbp-tm-icon-pencil"><img src="src/img/rooting.png">Routeur</a></li>
+                    <li><a href="doc.orm.html" class="cbp-tm-icon-pencil"><img src="src/img/orm.png">ORM</a></li>
+                    <li><a href="doc.package.html" class="cbp-tm-icon-pencil"><img src="src/img/package.png">Packages</a></li>
+                    <li><a href="doc.twig.html" class="cbp-tm-icon-pencil"><img src="src/img/template.png">Twig</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Forum/index.php">Forum</a>
+            </li>
+            <li>
+                <a href="https://github.com/KarooKoin/DrakkarDFramework">Téléchargement</a>
+            </li>
+        </ul>
+        <div class="filler-below"></div>
+    </div>
 		<script src="src/js/cbpTooltipMenu.min.js"></script>
 		<script>
 			var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
@@ -81,57 +56,16 @@
             <div class="menu_div"> <!--menu -->
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="doc.routing.html">Routeur</a>
                     </li>
                     <li>
-                        <a href="#">ORM</a>
-                        <ul class="sub-item1">
-                            <li>
-                                <a href="#">remplir</a>
-                                <ul class="sub-sub-item1">
-                                    <li>
-                                        <a href="#">remplir</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">remplir</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">remplir</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <a href="doc.orm.html">ORM</a>
                     </li>
                     <li>
-                        <a href="#">Routeur</a>
-                        <ul class="sub-item2">
-                            <li>
-                                <a href="#">remplir</a>
-                            </li>
-                            <li>
-                                <a href="#">remplir</a>
-                            </li>
-                            <li>
-                                <a href="#">remplir</a>
-                            </li>
-                        </ul>
+                        <a href="doc.package.html">Packages</a>
                     </li>
                     <li>
-                        <a href="#">Packages</a>
-                        <ul class="sub-item3">
-                            <li>
-                                <a href="#">remplir</a>
-                            </li>
-                            <li>
-                                <a href="#">remplir</a>
-                            </li>
-                            <li>
-                                <a href="#">remplir</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                    <a href="#">Twig</a>
+                        <a href="doc.twig.html">Twig</a>
                     </li>
                 </ul>
             </div> <!--fin du menu -->
@@ -196,12 +130,10 @@
                 </div>
             </div>
 		</div>
+    <div id="wrapfoot">
+        <p>©2014 DrakkarD Framework</p>
+    </div>
 
-		<!--3Box fin-->
-		<!--Recompenses-->
-		<div id="wrapfoot">
-		</div>
-		<!--Recompenses fin-->
 	</body>
 </html>
 

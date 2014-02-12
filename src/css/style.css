@@ -72,15 +72,12 @@ body{
 	float:left;
 	height:220px;
 	width: 18%;
-
 }
 
 .docu
 {
-
 	margin-right:25%;
 	margin-left:25%;
-	height:850px !important;
 	background-color:#E8EAEA;
 }
 .titre-top
@@ -116,10 +113,13 @@ body{
 }
 #wrapfoot{
 	width:100%;
-
+    color:#ffffff;
 	height:100px;
 	background-color:#454545;
+    text-align:center;
+    padding-top:40px;
 }
+
 header,
 #presentation,
 #bandeau,
