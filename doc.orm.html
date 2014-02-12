@@ -109,69 +109,44 @@
 </div> <!--fin du menu -->
 		<div class="docu">
 			<div class="titre">
-				Packages
+				Active Record
 			</div>
 			<div class="sous-titre">
 				Introduction
 			</div>
 			<div class="contenue">
-				Le système de Package a été pensé pour vous permettre de façon très simple d'exécuter un flot de méthode en appelant simplement package avec l'instance en question ainsi que le nom du package a éffectué.
-				<br><br>
-				Pourquoi utiliser ce système ? tout d'abord pour la clarté du code ! Il est en effet désormais possible de ranger la plupart de ses actions dans de simple configurations. Ainsi votre action est représenté simplement.
+				Active Record est un ORM simple qui vous permettra de faire toutes vos actions CRUD, mais dispose également d'un query builder. Il s'adapte plutot bien a vos models et aux relations entre les tables. Nous allons ici voir quelques basique pour le CRUD. Pour le reste je vous renvoi vers la <a href="http://www.phpactiverecord.org/projects/main/wiki">documentation complète de php Active Record</a>.
 			</div>
 			<div class="sous-titre">
-				La classe Package
+				CRUD
 			</div>
 			<div class="contenue">
-				La classe Package réponds au pattern des Singleton (ce qui signifie qu'il ne peut y avoir au plus qu'une seule instance de cette classe).<br><br>
-				Pour y accéder il vous suffit de faire :
+				Create :
+				<br><br> Pour créer un nouveau user : User::create(array('name' => 'Tito', …));
+				<br>create va attendre un array comprenant le nom du champ puis sa valeur
+				<br><br><br>
+				Read :
 				<br><br>
-				DrakkarD\Package\Package::getInstance();
-				<br>
-			</div>
-			<div class="sous-titre">
-				Configuration d'un Package
-			</div>
-			<div class="contenue">
-				La configuration des package se fait directement dans la classe que vous cibler. Vous créer un tableau qui contiendra en clé le nom de votre package et en valeur un tableau contenant le nom de toutes les méthodes a appelé.
+				Pour lire des données on peut très facilement récupérer un utilisateur par son id
+				<br>Comme ceci : $user->find(1); // on récupère ici l'utilisateur avec l'id = 1
+				<br>On peut également récupérer tous les utilisateurs avec : $user->find('all');
 				<br><br>
-				Cet attribut doit être couplé d'une méthode publique getPackage() qui retourneras ce tableau.
+				Active Record est de plus assez intéligent pour permettre de faire des méthodes personnalisés aux models.
+				<br>exemple : $user->find_by_name('Michel'); // va directement chercher tous les utilisateurs ou le nom seras Michel
+				<br><br><br>
+				Update :
 				<br><br>
-				Le nom des méthodes a appelé peut être couplé de différents arguments. L'ensemble des arguments devront être entourés de parenthèses. (comme lors d'un appel de fonction normal)
-			</div>
-			<div class="sous-titre">
-				Les Arguments
-			</div>
-			<div class="contenue">
-				Plusieurs types d'arguments peuvent être passés :
+				pour ceci une fois l'instance d'un utilisateur modifié par rapport au donnée enregistré en Base de Donnée.
+				<br>Il nous suffit de faire : $user->save();
+				<br>Ce qui sauvegarderas en base de données les nouvelles données;
+				<br><br><br>
+				Delete
 				<br><br>
-				On peut passer une simple chaine de caractères entouré ou non de quote (') ou de double quote (").
-				<br>
-				function_to_call('chaine_de_caractères');
+				Pour delete une ligne en base de donnée. Une fois l'instance hydraté.
+				<br>Il nous suffit de faire $user->delete();
 
-				On peut aussi accéder a une variable globale. Pour ceci on va indiqué que l'on souhaite atteindre une variable grace au signe pourcentage (%)
-				<br><br>
-				ex : 'ActionName1' => 'functionToExecute(%variableName)'
-				<br><br>
-				On peut également accéder a une constante constante globale. Pour cela on va indiqué que l'on souhaite atteindre une constante grace au point d'exclamation (!)
-				<br><br>
-				ex : 'ActionName1' => 'functionToExecute(!CONSTANT_NAME)'
-				<br><br>
-				<span style="texxt-align:center">de la même manière on peut accéder aux :</span>
-				<br><br>
-				instance et attribut d'instance 
-				<br><br>ex : 'ActionName1' => 'functionToExecute(%instanceName.attributName)'
-				<br><br>
-				instance variable protected ou private : Dans ce cas là on va tenter d'appeller la méthode getAttributName();
-				<br><br>
-				static attribut : 'ActionName1' => 'functionToExecute(%NamespaceName\InstanceName::%attributName)'
-				<br><br>
-				constantes de classe : 'ActionName1' => 'functionToExecute(%NamespaceName\InstanceName::!CONSTANT_NAME)'
-				<br><br>
-			</div>
-			<div class="sous-titre">Retour des valeurs</div>
-			<div class="contenue">Il est a noté que l'appel a package pour une action renvoi toutes les valeurs de retours des méthodes dans un tableau.
-				<br><br> Ainsi si vous faites : $return = $package->action($instance, "what_ever");<br>$return contiendra toutes les valeurs de retour !
+				<br><br><br>
+				Comme vous avez pu le voir Active Record est très simple d'utilisation mais réserve tout de même quelques bonnes surprise ! Il vous faut absolument aller voir la documentation de Active Record pour pouvoir l'utiliser dans un projet.
 			</div>
 <div style="height:50px; width:100%; background-color:#454545;">
 		</div>
