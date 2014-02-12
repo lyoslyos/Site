@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Drakkard Framework Homepage">
+    <meta name="author" content="DrakkarD Framework">
+    <meta charset="utf-8">
+    <title>Drakkard Framework</title>
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--Header-->
+<header>
+    <div id="presentation">
+        <div class="head">
+            <div id="presentation_col-left">
+                <div class="boxImg2"><img src="src/img/drakkard.svg" id="logo" alt="Logo drakkard"></div>
+            </div>
+            <h1 class="titre-top">Drak<span style="color:white">karD</span> Framework</h1>
+        </div>
+    </div>
+</header>
+<!--Bandeau-->
+<div id="bandeau">
+    <ul id="cbp-tm-menu" class="cbp-tm-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="doc.intro.html">Documentation</a>
+            <ul class="cbp-tm-submenu">
+                <li><a href="doc.intro.html" class="cbp-tm-icon-pencil"><img src="src/img/rooting.png">Introduction</a></li>
+                <li><a href="doc.orm.html" class="cbp-tm-icon-pencil"><img src="src/img/orm.png">ORM</a></li>
+                <li><a href="doc.package.html" class="cbp-tm-icon-pencil"><img src="src/img/package.png">Packages</a></li>
+                <li><a href="doc.twig.html" class="cbp-tm-icon-pencil"><img src="src/img/template.png">Twig</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="Forum/index.php">Forum</a>
+        </li>
+        <li>
+            <a href="https://github.com/KarooKoin/DrakkarDFramework">Téléchargement</a>
+        </li>
+    </ul>
+    <div class="filler-below"></div>
+</div>
+<script src="src/js/cbpTooltipMenu.min.js"></script>
+<script>
+    var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+</script>
+<!--Bandeau fin-->
+<!--3Box-->
+<div id="global-contenue">
+    <div class="menu_div"> <!--menu -->
+        <ul>
+            <li>
+                <a href="doc.intro.html">Introduction</a>
+            </li>
+            <li>
+                <a href="doc.orm.html">ORM</a>
+            </li>
+            <li>
+                <a href="doc.package.html">Packages</a>
+            </li>
+            <li>
+                <a href="doc.twig.html">Twig</a>
+            </li>
+        </ul>
+    </div> <!--fin du menu -->
+    <div class="docu">
+        <div class="titre">
+            Introduction
+        </div>
+        <div class="sous-titre">
+            Installation
+        </div>
+        <div class="contenue">
+            Après avoir téléchargé DrakkarD Framework vous pourrez commencer votre projet immédiatement.<br>
+            Votre code sera à réaliser dans le dossier project de votre arborescence DrakkarD Framework, ce dossier project contient
+            différents dossiers nécessaires au fonctionnement du framework: config, controllers, models et templates.<br>
+            Dans le dossier web de l'arborescence du framework se trouve un fichier index.php qui est la base de départ de tout projet, vous n'aurez pas à y toucher.
+            C'est par contre dans ce dossier que se trouvent tous les assets de votre projet: les images, les scripts, les feuilles de style, etc.
+        </div>
+        <div class="sous-titre">
+            Autoload
+        </div>
+        <div class="contenue">
+            Pour plus de facilité, Drakkard Framework intègre un autoloader de classes, ainsi plus besoin de devoir inclure chacun de vos fichiers de classe, à chaque appel de classe DrakkarD Framework recherche si cette classe existe et dans ce cas l'inclue.<br>
+            Le dossier project contient un sous-dossier config, dans ce dossier doit se trouver un fichier classes.yml . C'est dans ce fichier que DrakkarD Framework va chercher le lien entre une classe et son fichier. A chaque fois que vous allez créer une classe dans votre projet, vous devrez absolument rajouter une ligne dans ce fichier classes.yml pour indiquer à l'autoloader où se trouve votre nouvelle classe:<br><br>
+            Nom_de_la_classe : chemin/vers/le/fichier/de/la/classe.php<br><br>
+            Le chemin vers le fichier se fait à partir du dossier project, voici un exemple pour une classe TestController dans project/controllers/TestController.php :<br><br>
+            TestController : controllers/testController.php
+        </div>
+        <div class="sous-titre">
+            Routeur
+        </div>
+        <div class="contenue">
+            DrakkarD Framework vous propose un système de routing simple, qui avec un format d'url vous redirige vers une action spécifique.<br>
+            Vous avez un premier fichier core/config/routing.yml qui redirige un format d'url vers un autre fichier de routing qui contient les controllers et les actions cibles.<br><br>
+            nom_de_route : <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;pattern : url_de_la_route<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;ressource : chemin_vers_le_fichier_routing_du_projet<br><br>
+            Il y est présent une route par défaut "drakkard" avec comme pattern par défaut "/", si vous souhaitez créer un autre chemin dans ce fichier il faut toujours que le tri des routes se fasse de façn décroissante. Si vous avez trois routes avec comem pattern "/", "/admin", "/admin/user", la première route à être présente dans le fichier sera la route "/admin/user", ensuite la route "/admin" et pour finir la route "/".<br>
+            <br>
+            Ces routes dans le core du framework ammènent vers les routes de votre projet, ce sont ces routes qui indiquent quel format d'url ammène vers quelle action de quel controller. <br><br>
+            nom_de_route : <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pattern : url_de_la_route<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;controller : nom_du_controller<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;action : nom_de_l'action<br><br>
+            <strong>ATTENTION CONVENTION DE NOMMAGE</strong>: VOus devez nommer vos controllers sous ce format: "nomController" et vos action: "nomAction" <strong>MAIS</strong> dans vos routes vous devez juste indiquer les noms sans les suffixes "COntroller" et "Action".<br>
+            <br>
+            Si vous avez besoin d'indiquer des paramètres d'url variables (par exemple un numéro de page) vous pouvez utiliser le format "{nom_de_la_variable}" dans le pattern de votre route, ainsi pour un numéro de page:<br><br>
+            pattern : /page/{numero}<br><br>
+        </div>
+    </div>
+</div>
+<div id="wrapfoot">
+    <p>©2014 DrakkarD Framework</p>
+</div>
+
+</body>
+</html>
+
+
